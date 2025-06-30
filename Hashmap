@@ -1,0 +1,25 @@
+package PractiseOops.Test;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Hashmap {
+    public static void keycount(String a){
+        HashMap<Character,Integer> h1=new HashMap<>();
+        for(char ch:a.toCharArray()){
+            h1.put(ch, h1.getOrDefault(ch,0)+1);
+        }
+        System.out.println("Character counts:");
+        for (char key : h1.keySet()) {
+            System.out.print(key + " : " + h1.get(key) + ", ");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String a=sc.next();
+        keycount(a);
+
+    }
+}
+
+
